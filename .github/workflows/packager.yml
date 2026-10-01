@@ -1,7 +1,8 @@
 name: Auto NIC packager
 
-# On every push
+# On every push or manual trigger
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
     paths:
@@ -68,4 +69,3 @@ jobs:
         asset_path: "./Ted2's Mod Menu Template v${{ env.VERSION }}.nic.tar"
         asset_name: "Ted2-Mod-Menu-Template v${{ env.VERSION }}.nic.tar"
         asset_content_type: application/x-tar
-          
